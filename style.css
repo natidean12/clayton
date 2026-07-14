@@ -1,0 +1,915 @@
+/* --- CONFIGURAÇÕES GERAIS --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  background: #0f0f0f;
+  color: #fff;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .hero-title {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* --- MENU RESPONSIVO --- */
+nav {
+  position: sticky;
+  top: 0;
+  background: rgba(17, 17, 17, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #222;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo span {
+  color: #e74c3c;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  align-items: center;
+}
+
+nav a {
+  color: #aaa;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #e74c3c;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* --- HERO BANNER --- */
+.hero {
+  position: relative;
+  min-height: 85vh;
+  background: linear-gradient(rgba(0,0,0,0.65), rgba(15,15,15,1)), url('https://images.unsplash.com/photo-1551818255-e6e10975bc17?q=80&w=1920') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+.hero h1 span {
+  background: linear-gradient(45deg, #e74c3c, #9b59b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: #ccc;
+  margin-bottom: 2.5rem;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn-primary {
+  background: #e74c3c;
+  color: white;
+  box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: white;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+}
+
+/* --- BARRA DE BENEFÍCIOS --- */
+.benefits-bar {
+  background: #161616;
+  padding: 2rem 1rem;
+  border-bottom: 1px solid #222;
+}
+
+.benefits-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+.benefit-item i {
+  font-size: 2rem;
+  color: #e74c3c;
+}
+
+.benefit-text h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.benefit-text p {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* --- LAYOUT GLOBAL --- */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+section {
+  margin-bottom: 5rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  left: 0
+}
+
+/* --- SEÇÃO SOBRE & MVV --- */
+.about-main {
+  text-align: left;
+  line-height: 1.8;
+}
+
+.about-content p {
+  margin-bottom: 1.2rem;
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+.about-content p:last-child {
+  margin-bottom: 0;
+}
+
+.sub-section-title {
+  font-size: 1.6rem;
+  margin: 3rem 0 1.5rem 0;
+  color: #fff;
+}
+
+/* Grid de Missão, Visão e Valores */
+.mvv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.mvv-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.mvv-card .card-icon {
+  font-size: 2.5rem;
+  color: #e74c3c;
+  margin-bottom: 1rem;
+}
+
+.mvv-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.mvv-card p {
+  font-size: 0.95rem;
+  color: #aaa;
+}
+
+/* Diferenciais */
+.diferenciais-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  background: #111;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #222;
+}
+
+.diferencial-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.diferencial-item i {
+  color: #e74c3c;
+  font-size: 1.3rem;
+  margin-top: 3px;
+}
+
+.diferencial-item h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.diferencial-item p {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Ajustes Responsivos adicionais */
+@media (max-width: 600px) {
+  .diferenciais-grid {
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* --- ESTILOS DE SERVIÇOS --- */
+.section-description {
+  color: #aaa;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.service-card {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 2rem;
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  color: #e74c3c;
+  margin-bottom: 1.5rem;
+}
+
+.service-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.service-card p {
+  color: #aaa;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* --- ESTILOS DE ÁREAS DE ATENDIMENTO --- */
+.regions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.region-card {
+  background: #1c1c1c;
+  border: 1px solid #252525;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.region-card:hover {
+  transform: translateY(-5px);
+  border-color: #e74c3c;
+  box-shadow: 0 5px 15px rgba(231, 76, 60, 0.2);
+}
+
+.region-card i {
+  font-size: 2rem;
+  color: #e74c3c;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.region-card h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.region-card span {
+  font-size: 0.8rem;
+  color: #888;
+  display: block;
+  margin-top: 5px;
+}
+
+.border-highlight {
+  border: 1px dashed #e74c3c;
+}
+
+/* --- ESTILOS DE COMO FUNCIONA (LINHA DO TEMPO) --- */
+.step-timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.step-item {
+  background: #1c1c1c;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #252525;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background: #e74c3c;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin: 0 auto 1rem auto;
+  font-size: 1.2rem;
+  box-shadow: 0 0 15px rgba(231, 76, 60, 0.4);
+}
+
+.step-item h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.step-item p {
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+/* --- ESTILOS NOSSOS NÚMEROS & BADGES --- */
+.numbers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.number-card {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.counter {
+  font-size: 2.8rem;
+  color: #e74c3c;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.number-card p {
+  font-size: 1rem;
+  color: #ccc;
+  font-weight: 500;
+}
+
+/* Lista de Selos/Badges */
+.badges-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.badge-item {
+  background: rgba(231, 76, 60, 0.1);
+  border: 1px solid rgba(231, 76, 60, 0.3);
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge-item i {
+  color: #e74c3c;
+}
+
+/* --- ESTILOS DE DEPOIMENTOS --- */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.testimonial-card {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.stars {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.testimonial-text {
+  font-style: italic;
+  color: #ddd;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.testimonial-author {
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.testimonial-source {
+  font-size: 0.8rem;
+  color: #e74c3c;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.google-link-wrapper {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.google-link {
+  color: #f39c12;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s;
+}
+
+.google-link:hover {
+  color: #f1c40f;
+  text-decoration: underline;
+}
+
+/* --- ESTILOS DE PARCEIROS (LOGO BAR) --- */
+.logo-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #1c1c1c;
+  border-radius: 12px;
+  border: 1px solid #252525;
+}
+
+.partner-logo {
+  color: #666;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border: 2px dashed #333;
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+
+.partner-logo:hover {
+  color: #e74c3c;
+  border-color: #e74c3c;
+  transform: scale(1.05);
+}
+
+/* --- ESTILOS DA GALERIA DE FOTOS --- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 220px;
+  border: 1px solid #252525;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  opacity: 0.9;
+  transition: background 0.3s;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-overlay h4 {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 2px;
+}
+
+.gallery-overlay p {
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+/* --- ESTILOS DE RASTREAMENTO --- */
+.tracking-card {
+  padding: 2.5rem 2rem;
+}
+
+.tracking-search {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tracking-search input {
+  flex: 1;
+  background: #2c2c2c;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.tracking-search input:focus {
+  outline: 2px solid #e74c3c;
+}
+
+.tracking-result {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.status-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.status-badge {
+  background: rgba(231, 76, 60, 0.2);
+  color: #e74c3c;
+  padding: 0.3rem 1rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border: 1px solid #e74c3c;
+}
+
+.status-divider {
+  border: 0;
+  height: 1px;
+  background: #222;
+  margin: 1rem 0;
+}
+
+.status-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.timeline-point {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.timeline-point.active {
+  color: #25d366;
+}
+
+.timeline-point i {
+  font-size: 1.1rem;
+}
+
+.status-info {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 1rem;
+}
+
+/* --- ESTILOS DO FORMULÁRIO DE ORÇAMENTO --- */
+.form-card {
+  padding: 2.5rem 2rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ccc;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+  background: #2c2c2c;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 0.8rem;
+  color: #fff;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+  outline: 2px solid #e74c3c;
+}
+
+.btn-submit {
+  margin-top: 2rem;
+  width: 100%;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsividade do Rastreio */
+@media (max-width: 600px) {
+  .tracking-search {
+    flex-direction: column;
+  }
+}
+
+/* --- ESTILOS DO FAQ --- */
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.faq-item h4 {
+  font-size: 1.15rem;
+  color: #e74c3c;
+  margin-bottom: 0.5rem;
+}
+
+.faq-item p {
+  font-size: 0.95rem;
+  color: #bbb;
+  line-height: 1.6;
+}
+
+/* --- ESTILOS DE CONTATO --- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  text-align: left;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  background: #1c1c1c;
+  padding: 1.2rem;
+  border-radius: 8px;
+  border: 1px solid #252525;
+}
+
+.contact-method i {
+  font-size: 1.8rem;
+  color: #e74c3c;
+  width: 40px;
+  text-align: center;
+}
+
+.contact-method h4 {
+  font-size: 1.05rem;
+  margin-bottom: 2px;
+}
+
+.contact-method p, .contact-method a {
+  font-size: 0.95rem;
+  color: #aaa;
+  text-decoration: none;
+}
+
+.contact-method a:hover {
+  color: #e74c3c;
+}
+
+.map-card {
+  padding: 0.5rem;
+  overflow: hidden;
+}
+
+/* --- ESTILOS DO RODAPÉ (FOOTER) --- */
+footer {
+  background: #090909;
+  border-top: 1px solid #1a1a1a;
+  padding: 4rem 2rem 2rem 2rem;
+  margin-top: 5rem;
+  text-align: left;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+}
+
+.footer-brand p {
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+.footer-links h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.footer-links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-links a {
+  color: #666;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #e74c3c;
+}
+
+.footer-copy {
+  grid-column: 1 / -1;
+  border-top: 1px solid #1a1a1a;
+  padding-top: 2rem;
+  text-align: center;
+  color: #444;
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Responsividade do FAQ */
+@media (max-width: 600px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-copy {
+    flex-direction: column;
+    align-items: center;
+  }
+}
