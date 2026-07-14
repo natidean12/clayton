@@ -1,5 +1,5 @@
-#📦 Descrição
-#📌 Sobre o projeto
+# 📦 Descrição
+# 📌 Sobre o projeto
 
 A Ton Express é uma landing page institucional desenvolvida para apresentar os serviços de uma empresa especializada em logística, transporte rápido e entregas expressas. O projeto foi criado com foco em transmitir profissionalismo, credibilidade e praticidade, oferecendo uma experiência intuitiva para clientes que buscam solicitar orçamentos, conhecer os serviços disponíveis e entrar em contato de forma rápida.
 
@@ -7,7 +7,7 @@ Além da apresentação da empresa, o site conta com diversas funcionalidades qu
 
 Toda a interface foi desenvolvida utilizando um design moderno, responsivo e otimizado para computadores, tablets e smartphones, proporcionando excelente navegação em qualquer dispositivo.
 
-#⚙️ Funcionalidades
+# ⚙️ Funcionalidades
 Landing Page totalmente responsiva;
 Menu de navegação com rolagem suave entre as seções;
 Banner principal (Hero Section) com chamadas para ação;
@@ -28,7 +28,7 @@ Perguntas Frequentes (FAQ);
 Informações de contato;
 Mapa incorporado do Google Maps;
 Layout moderno com animações e efeitos visuais.
-#🛠️ Tecnologias utilizadas
+# 🛠️ Tecnologias utilizadas
 HTML5
 CSS3
 JavaScript
@@ -37,6 +37,6 @@ Google Fonts
 FormSubmit
 Google Maps Embed API
 Responsividade (Media Queries)
-#🎯 Objetivo
+# 🎯 Objetivo
 
 Desenvolver um site institucional moderno e responsivo para empresas de logística e entregas rápidas, apresentando seus serviços de maneira profissional e oferecendo recursos que facilitem o contato com clientes, solicitação de orçamentos e demonstração da credibilidade da empresa.
